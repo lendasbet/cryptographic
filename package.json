@@ -1,0 +1,21 @@
+{
+  "name": "@lendas/cryptographic",
+  "version": "1.0.0",
+  "description": "Package to encrypt strings using AES-256-CBC algorithm and to decrypt strings using the same algorithm.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
+  "keywords": ["encrypt", "decrypt", "aes-256-cbc"],
+  "author": "Lendas Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.8.2",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
+}
