@@ -1,8 +1,8 @@
 name: Publish
 on:
-    push:
-        branches:
-        - "main"
+  push:
+    branches:
+      - "main"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -23,7 +23,7 @@ jobs:
         - name: Create Release Pull Request or Publish
           id: changesets
           uses: changesets/action@v1
-          with:
-            publish: pnpm run build
           env:
             GITHUB_TOKEN: ${{ github.token }}
+          with:
+            publish: pnpm run build
